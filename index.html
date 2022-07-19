@@ -5,7 +5,7 @@ Hello World
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 <script type="text/javascript">
     (function(d,a,o,e){
-        var p = { ci:'test-incentive2',mi:'#被紹介者ID#', ta:'#売上金額#', pt:'#成果ポイント#', rm:'#備考#', tokey: $.cookie('invy_tk') != null ? $.cookie('invy_tk') : '', suid: $.cookie('invy_suid') != null ? $.cookie('invy_suid') : '', code: $.cookie('invy_code') != null ? $.cookie('invy_code') : '', cli_id: 32 }
+        var p = { ci:'test-incentive2',mi:'test', ta:'test', pt:'1', rm:'test', tokey: $.cookie('invy_tk') != null ? $.cookie('invy_tk') : '', suid: $.cookie('invy_suid') != null ? $.cookie('invy_suid') : '', code: $.cookie('invy_code') != null ? $.cookie('invy_code') : '', cli_id: 32 }
         var s = document.createElement("img");
         s.async = true;
         s.src = encodeURI('http://localhost:3300/rest/report/addcv?ci='+p.ci+'&mi='+p.mi+'&ta='+p.ta+'&pt='+p.pt+'&rm='+p.rm+'&tokey='+p.tokey+'&suid='+p.suid+'&code='+p.code+'&cli_id='+p.cli_id);
