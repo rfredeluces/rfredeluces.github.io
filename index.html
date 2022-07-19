@@ -15,6 +15,11 @@ Hello World
     var tokey=getParam('tokey');
     var suid=getParam('suid');
     var code=getParam('code');
+
+    console.log(tokey)
+    console.log(suid)
+    console.log(code)
+
     
     if(tokey){
         document.cookie = 'invy_tk='+tokey+'; path=/; max-age=31536000; domain=creativehope.co.jp';
