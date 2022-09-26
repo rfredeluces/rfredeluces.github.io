@@ -1,17 +1,19 @@
 
 <html>
 <body>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <script type="text/javascript">
-        (function(d,a,o,e){
-            var p = { ci:'test-incentive2',mi:'fredeluces.rcb@gmail.com', ta:'399', pt:'3', rm:'product-test', tokey: $.cookie('invy_tk') != null ? $.cookie('invy_tk') : '', suid: $.cookie('invy_suid') != null ? $.cookie('invy_suid') : '', code: $.cookie('invy_code') != null ? $.cookie('invy_code') : '', cli_id: 205 }
-            var s = document.createElement("img");
-            s.async = true;
-            s.src = encodeURI('https://stg02.invy.jp/project-api/rest/report/addcv?ci='+p.ci+'&mi='+p.mi+'&ta='+p.ta+'&pt='+p.pt+'&rm='+p.rm+'&tokey='+p.tokey+'&suid='+p.suid+'&code='+p.code+'&cli_id='+p.cli_id);
-            var s0 = document.getElementsByTagName('script')[0];
-            s0.parentNode.insertBefore(s, s0);
-        })(document,'body','invy-asp','img')
+        function getCookie(name) {
+            var matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
+        var p = { ci:'test-child4',mi:'1', ta:'test', pt:'1', rm:'2', tokey: getCookie('invy_tk'), suid: getCookie('invy_suid'), code: getCookie('invy_code'),  cli_id: 4 };
+        var s = document.createElement("img");
+        s.async = true;
+        s.src = encodeURI('http://localhost:3300/rest/report/addcv?ci='+p.ci+'&mi='+p.mi+'&ta='+p.ta+'&pt='+p.pt+'&rm='+p.rm+'&tokey='+p.tokey+'&suid='+p.suid+'&code='+p.code+'&cli_id='+p.cli_id);
+        var s0 = document.getElementsByTagName('script')[0];
+        s0.parentNode.insertBefore(s, s0);
     </script>
 </body>
 

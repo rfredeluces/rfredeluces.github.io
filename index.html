@@ -9,34 +9,27 @@
 
 
         <script type="text/javascript">
-        function getParam(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[[]]/g, "\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-        
-        var tokey=getParam('tokey');
-        var suid=getParam('suid');
-        var code=getParam('code');
-
-        console.log(tokey)
-        console.log(suid)
-        console.log(code)
-
-        
-        if(tokey){
-            document.cookie = 'invy_tk='+tokey+'; path=/; max-age=31536000;';
-        }
-        if(suid){
-            document.cookie = 'invy_suid='+suid+'; path=/; max-age=31536000;';
-        }
-        if(code){
-            document.cookie = 'invy_code='+code+'; path=/; max-age=31536000;';
-        }
+            function getParam(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[[]]/g, "\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+            var tokey=getParam('tokey');
+            var suid=getParam('suid');
+            var code=getParam('code');
+            if(tokey){
+                document.cookie = 'invy_tk='+tokey+'; path=/; max-age=31536000; domain=#親ドメインを記載してください#';
+            }
+            if(suid){
+                document.cookie = 'invy_suid='+suid+'; path=/; max-age=31536000; domain=#親ドメインを記載してください#';
+            }
+            if(code){
+                document.cookie = 'invy_code='+code+'; path=/; max-age=31536000; domain=#親ドメインを記載してください#';
+            }
         </script>
     </body>
 </html>
